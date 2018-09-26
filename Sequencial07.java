@@ -2,8 +2,10 @@ import java.util.Scanner;
 
 public class Sequencial07 {
 
+	private static Scanner scan;
+
 	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+		scan = new Scanner(System.in);
 
 		int dia = 0;
 		int mes = 0;
@@ -38,8 +40,7 @@ public class Sequencial07 {
 			ano2 = ano2 * 365;
 		}
 		if (mes <= mes1) {
-			mes2 = mes1 + mes;
-			mes2 = mes2 - 12;
+			mes2 = mes1 - mes;
 			mes2 = mes2 * 30;
 		}
 		if (dia <= dia1) {
@@ -47,18 +48,21 @@ public class Sequencial07 {
 		} else {
 
 			if (ano > ano1) {
-				System.out
-						.println("O ano de nascimento n„o pode ser maior que o ano atual");
+				System.out.println("O ano de nascimento n√£o pode ser maior que o ano atual");
 			}
 			if (dia > dia1) {
 				dia2 = dia - dia1;
 			}
+			if (mes > mes1) {
+				mes2 = mes - mes1;
+				mes2 = mes2 * 30;
+			}
 
 		}
-		
-		diasvividos = dia2 + mes2 + ano2;
 
-		System.out.println("Os dias vividos s„o aproximadamente: " + diasvividos);
+		diasvividos = ano2 + dia2 + mes2;
+
+		System.out.println("Os dias vividos s√£o aproximadamente: " + diasvividos);
 
 	}
 
