@@ -151,6 +151,7 @@ public class Para05 {
 					
 					if (menornota5 > nota3)
 						menornota5 = nota3;
+					
 					aluno5++;
 				}
 			}

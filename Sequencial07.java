@@ -20,6 +20,7 @@ public class Sequencial07 {
 		int ano2 = 0;
 
 		int diasvividos = 0;
+		//utilizado somente int pois não possui data com casas decimais
 
 		System.out.println("Informe o dia de nascimento: ");
 		dia = scan.nextInt();
@@ -35,6 +36,7 @@ public class Sequencial07 {
 		System.out.println("Agora informe o ano atual");
 		ano1 = scan.nextInt();
 
+		// sobre os calculos abaixo, fui deduzindo para que tivesse uma conta quase precisa
 		if (ano <= ano1) {
 			ano2 = ano1 - ano;
 			ano2 = ano2 * 365;
@@ -45,15 +47,17 @@ public class Sequencial07 {
 		}
 		if (dia <= dia1) {
 			dia2 = dia1 - dia;
-		} else {
+		} 
+		// Passe pelo de cima, se não faça as contas abaixo 
+		else {
 
-			if (ano > ano1) {
-				System.out.println("O ano de nascimento nÃ£o pode ser maior que o ano atual");
-			}
-			if (dia > dia1) {
+		if (ano > ano1) {
+				System.out.println("O ano de nascimento não pode ser maior que o ano atual");
+				
+		}if (dia > dia1) {
 				dia2 = dia - dia1;
-			}
-			if (mes > mes1) {
+			
+		}if (mes > mes1) {
 				mes2 = mes - mes1;
 				mes2 = mes2 * 30;
 			}
@@ -61,8 +65,9 @@ public class Sequencial07 {
 		}
 
 		diasvividos = ano2 + dia2 + mes2;
+		// Calculo final para apresentação dos dias
 
-		System.out.println("Os dias vividos sÃ£o aproximadamente: " + diasvividos);
+		System.out.println("Os dias vividos são aproximadamente: " + diasvividos);
 
 	}
 

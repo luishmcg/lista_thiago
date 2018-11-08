@@ -17,10 +17,12 @@ import java.util.Scanner;
 		
 		while (matricula >= 0){
 		
+		// abaixo coleta de dados
 		System.out.println("Informe a matricula: ");
 		matricula = scan.nextInt();
 		
 		if (matricula >= 0){
+			//uma matricula negativa o sistema encerra
 		
 		System.out.println("Informe a primeira nota: ");
 		nota1 = scan.nextInt();
@@ -35,6 +37,7 @@ import java.util.Scanner;
 			media = (nota1 + nota2 + nota3) / 3;
 			System.out.println(matricula);
 			
+			//abaixo para saber a onde o aluno se encaixa
 			if (media >= 70){
 				System.out.println("Aprovado " + media);
 			}

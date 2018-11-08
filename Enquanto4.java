@@ -14,11 +14,12 @@ public class Enquanto4 {
 	int kg1 = 0;
 	int resto = 0;
 	
-	
+		// adicionei um limite como exemplo
 		while (kg1 <= 500){
 			System.out.println("Informe seu peso: ");
 			kg = scan.nextInt();
 			
+			// neste caso será para a verificação
 			kg1 += kg;
 			
 			if (kg <= 500){
@@ -27,6 +28,7 @@ public class Enquanto4 {
 			}
 		}
 		
+		// informar a quantidade de peso excedida
 		resto = kg1 - 500;
 		
 		System.out.println("Limite de peso excedido, para que o elevador suba ou desça, é preciso que uma pessoa de: " + resto +  "kg , retire-se. ");
